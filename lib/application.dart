@@ -8,7 +8,15 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData.light(),
+      theme: ThemeData(
+        useMaterial3: true,
+        primaryColor: Colors.white,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        canvasColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        fontFamily: 'Zen_Maru_Gothic',
+      ),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
       routeInformationParser: router.routeInformationParser,
