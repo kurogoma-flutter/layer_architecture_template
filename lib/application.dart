@@ -15,7 +15,7 @@ class Application extends StatelessWidget {
         canvasColor: Colors.transparent,
         highlightColor: Colors.transparent,
         splashColor: Colors.transparent,
-        fontFamily: 'Zen_Maru_Gothic',
+        fontFamily: 'LINE_Seed_JP',
       ),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
