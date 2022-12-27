@@ -23,6 +23,8 @@ dependencies:
   logger: ^1.1.0
   flutter_native_splash: ^2.2.10+1
   url_launcher: ^6.1.6
+  image_cropper: ^3.0.1
+  image_picker: ^0.8.6
 
 dev_dependencies:
   flutter_test:
