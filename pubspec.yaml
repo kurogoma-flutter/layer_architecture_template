@@ -45,7 +45,7 @@ flutter:
         - asset: assets/fonts/Yusei_Magic/YuseiMagic-Regular.ttf
     - family: Noto_Sans_JP
       fonts:
-        - asset: assets/fonts/Noto_Sans_JP/Noto_Sans_JP-Regular.otf
+        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf
     - family: Zen_Maru_Gothic
       fonts:
         - asset: assets/fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf
