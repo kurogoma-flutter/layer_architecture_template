@@ -27,6 +27,7 @@ class SampleNotifier extends StateNotifier<SampleState> {
     // AsyncValueのサンプル
     final futureSampleModelList = await sampleService.fetchSampleModelList();
     state = state.copyWith(
-        futureSampleList: AsyncValue.data(futureSampleModelList));
+      futureSampleList: AsyncValue.data(futureSampleModelList),
+    );
   }
 }

@@ -12,11 +12,11 @@ class CommonErrorPage extends StatelessWidget {
           children: [
             Text(
               '予期せぬエラーが発生しました。\nアプリを再起動してください。',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
             Text(
               '再起動しても解決しない場合は、\nお手数ですがお問い合わせください。',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),

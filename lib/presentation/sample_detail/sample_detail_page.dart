@@ -18,7 +18,7 @@ class SampleDetailPage extends StatelessWidget {
           children: [
             Text(
               'Sample Detail Page',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),

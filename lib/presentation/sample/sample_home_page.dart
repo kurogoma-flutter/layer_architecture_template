@@ -34,7 +34,7 @@ class SampleHomePage extends HookConsumerWidget {
           children: [
             Text(
               'Sample Home Page',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),
