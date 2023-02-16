@@ -8,7 +8,9 @@ environment:
 
 dependencies:
   build_runner: ^2.2.1
+  collection: ^1.17.0
   cupertino_icons: ^1.0.2
+  dio: ^5.0.0
   flutter:
     sdk: flutter
   flutter_native_splash: ^2.2.10+1

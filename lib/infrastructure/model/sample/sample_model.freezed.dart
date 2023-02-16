@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'sample_model.dart';
 
@@ -28,33 +28,37 @@ mixin _$SampleModel {
 abstract class $SampleModelCopyWith<$Res> {
   factory $SampleModelCopyWith(
           SampleModel value, $Res Function(SampleModel) then) =
-      _$SampleModelCopyWithImpl<$Res>;
+      _$SampleModelCopyWithImpl<$Res, SampleModel>;
+  @useResult
   $Res call({String id, String name});
 }
 
 /// @nodoc
-class _$SampleModelCopyWithImpl<$Res> implements $SampleModelCopyWith<$Res> {
+class _$SampleModelCopyWithImpl<$Res, $Val extends SampleModel>
+    implements $SampleModelCopyWith<$Res> {
   _$SampleModelCopyWithImpl(this._value, this._then);
 
-  final SampleModel _value;
   // ignore: unused_field
-  final $Res Function(SampleModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? name = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -65,30 +69,30 @@ abstract class _$$_SampleModelCopyWith<$Res>
           _$_SampleModel value, $Res Function(_$_SampleModel) then) =
       __$$_SampleModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, String name});
 }
 
 /// @nodoc
-class __$$_SampleModelCopyWithImpl<$Res> extends _$SampleModelCopyWithImpl<$Res>
+class __$$_SampleModelCopyWithImpl<$Res>
+    extends _$SampleModelCopyWithImpl<$Res, _$_SampleModel>
     implements _$$_SampleModelCopyWith<$Res> {
   __$$_SampleModelCopyWithImpl(
       _$_SampleModel _value, $Res Function(_$_SampleModel) _then)
-      : super(_value, (v) => _then(v as _$_SampleModel));
+      : super(_value, _then);
 
-  @override
-  _$_SampleModel get _value => super._value as _$_SampleModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? name = null,
   }) {
     return _then(_$_SampleModel(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
@@ -116,18 +120,16 @@ class _$_SampleModel implements _SampleModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SampleModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name));
+  int get hashCode => Object.hash(runtimeType, id, name);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SampleModelCopyWith<_$_SampleModel> get copyWith =>
       __$$_SampleModelCopyWithImpl<_$_SampleModel>(this, _$identity);
 }

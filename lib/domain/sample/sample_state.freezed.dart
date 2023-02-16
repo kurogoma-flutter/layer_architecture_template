@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'sample_state.dart';
 
@@ -16,7 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SampleState {
-  List<SampleModel> get sampleList => throw _privateConstructorUsedError;
+// こちらの場合FutureBuilder等が必要
+  List<SampleModel> get sampleList =>
+      throw _privateConstructorUsedError; // こちらの場合、state.futureSampleList.when~が使える
   AsyncValue<List<SampleModel>> get futureSampleList =>
       throw _privateConstructorUsedError;
 
@@ -29,35 +31,39 @@ mixin _$SampleState {
 abstract class $SampleStateCopyWith<$Res> {
   factory $SampleStateCopyWith(
           SampleState value, $Res Function(SampleState) then) =
-      _$SampleStateCopyWithImpl<$Res>;
+      _$SampleStateCopyWithImpl<$Res, SampleState>;
+  @useResult
   $Res call(
       {List<SampleModel> sampleList,
       AsyncValue<List<SampleModel>> futureSampleList});
 }
 
 /// @nodoc
-class _$SampleStateCopyWithImpl<$Res> implements $SampleStateCopyWith<$Res> {
+class _$SampleStateCopyWithImpl<$Res, $Val extends SampleState>
+    implements $SampleStateCopyWith<$Res> {
   _$SampleStateCopyWithImpl(this._value, this._then);
 
-  final SampleState _value;
   // ignore: unused_field
-  final $Res Function(SampleState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sampleList = freezed,
-    Object? futureSampleList = freezed,
+    Object? sampleList = null,
+    Object? futureSampleList = null,
   }) {
     return _then(_value.copyWith(
-      sampleList: sampleList == freezed
+      sampleList: null == sampleList
           ? _value.sampleList
           : sampleList // ignore: cast_nullable_to_non_nullable
               as List<SampleModel>,
-      futureSampleList: futureSampleList == freezed
+      futureSampleList: null == futureSampleList
           ? _value.futureSampleList
           : futureSampleList // ignore: cast_nullable_to_non_nullable
               as AsyncValue<List<SampleModel>>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -68,32 +74,32 @@ abstract class _$$_SampleStateCopyWith<$Res>
           _$_SampleState value, $Res Function(_$_SampleState) then) =
       __$$_SampleStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {List<SampleModel> sampleList,
       AsyncValue<List<SampleModel>> futureSampleList});
 }
 
 /// @nodoc
-class __$$_SampleStateCopyWithImpl<$Res> extends _$SampleStateCopyWithImpl<$Res>
+class __$$_SampleStateCopyWithImpl<$Res>
+    extends _$SampleStateCopyWithImpl<$Res, _$_SampleState>
     implements _$$_SampleStateCopyWith<$Res> {
   __$$_SampleStateCopyWithImpl(
       _$_SampleState _value, $Res Function(_$_SampleState) _then)
-      : super(_value, (v) => _then(v as _$_SampleState));
+      : super(_value, _then);
 
-  @override
-  _$_SampleState get _value => super._value as _$_SampleState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sampleList = freezed,
-    Object? futureSampleList = freezed,
+    Object? sampleList = null,
+    Object? futureSampleList = null,
   }) {
     return _then(_$_SampleState(
-      sampleList: sampleList == freezed
+      sampleList: null == sampleList
           ? _value._sampleList
           : sampleList // ignore: cast_nullable_to_non_nullable
               as List<SampleModel>,
-      futureSampleList: futureSampleList == freezed
+      futureSampleList: null == futureSampleList
           ? _value.futureSampleList
           : futureSampleList // ignore: cast_nullable_to_non_nullable
               as AsyncValue<List<SampleModel>>,
@@ -109,14 +115,18 @@ class _$_SampleState implements _SampleState {
       this.futureSampleList = const AsyncValue.loading()})
       : _sampleList = sampleList;
 
+// こちらの場合FutureBuilder等が必要
   final List<SampleModel> _sampleList;
+// こちらの場合FutureBuilder等が必要
   @override
   @JsonKey()
   List<SampleModel> get sampleList {
+    if (_sampleList is EqualUnmodifiableListView) return _sampleList;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_sampleList);
   }
 
+// こちらの場合、state.futureSampleList.when~が使える
   @override
   @JsonKey()
   final AsyncValue<List<SampleModel>> futureSampleList;
@@ -133,18 +143,17 @@ class _$_SampleState implements _SampleState {
             other is _$_SampleState &&
             const DeepCollectionEquality()
                 .equals(other._sampleList, _sampleList) &&
-            const DeepCollectionEquality()
-                .equals(other.futureSampleList, futureSampleList));
+            (identical(other.futureSampleList, futureSampleList) ||
+                other.futureSampleList == futureSampleList));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_sampleList),
-      const DeepCollectionEquality().hash(futureSampleList));
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_sampleList), futureSampleList);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SampleStateCopyWith<_$_SampleState> get copyWith =>
       __$$_SampleStateCopyWithImpl<_$_SampleState>(this, _$identity);
 }
@@ -154,9 +163,9 @@ abstract class _SampleState implements SampleState {
       {final List<SampleModel> sampleList,
       final AsyncValue<List<SampleModel>> futureSampleList}) = _$_SampleState;
 
-  @override
+  @override // こちらの場合FutureBuilder等が必要
   List<SampleModel> get sampleList;
-  @override
+  @override // こちらの場合、state.futureSampleList.when~が使える
   AsyncValue<List<SampleModel>> get futureSampleList;
   @override
   @JsonKey(ignore: true)
