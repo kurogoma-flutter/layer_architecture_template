@@ -32,6 +32,8 @@
 /// }
 /// ```
 ///
+// ignore_for_file: comment_references
+
 abstract class GenericException implements Exception {
   const GenericException(this.errorCode, {this.info});
 

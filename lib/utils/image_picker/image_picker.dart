@@ -21,6 +21,10 @@ Future<Map<String, dynamic>?> pickAndCropImage(
   // ファイル名の選択
   final fileName = pickedFile.name;
 
+  if (context.mounted) {
+    return null;
+  }
+
   final croppedFile = await cropImage(
     filePath: pickedFile.path,
     context: context,
