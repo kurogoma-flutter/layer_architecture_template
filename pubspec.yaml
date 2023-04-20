@@ -11,12 +11,14 @@ dependencies:
   collection: ^1.17.0
   cupertino_icons: ^1.0.2
   dio: ^5.0.0
+  encrypt: ^5.0.1
   flutter:
     sdk: flutter
   flutter_native_splash: ^2.2.16
   freezed: ^2.1.1
   freezed_annotation: ^2.1.0
   go_router: ^6.0.6
+  hashids2: ^2.0.0
   hooks_riverpod: ^2.0.2
   image_cropper: ^3.0.1
   image_picker: ^0.8.6
@@ -29,6 +31,7 @@ dependencies:
   riverpod_lint: ^1.0.1
   shared_preferences: ^2.0.15
   url_launcher: ^6.1.6
+  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_launcher_icons: ^0.11.0
