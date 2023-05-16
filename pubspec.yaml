@@ -28,7 +28,7 @@ dependencies:
   logger: ^1.1.0
   mockito: ^5.4.0
   retrofit: ^4.0.1
-  riverpod_annotation: ^2.1.0
+  riverpod_annotation: ^2.1.1
   riverpod_generator: ^2.1.5
   riverpod_lint: ^1.0.1
   shared_preferences: ^2.0.15
