@@ -3,9 +3,33 @@ include: package:flutter_lints/flutter.yaml
 analyzer:
   errors:
     avoid_web_libraries_in_flutter: ignore
+  plugins:
+    - dart_code_metrics
 
-linter:
+art_code_metrics:
+  metrics:
+    maximum-nesting-level: 5
+    number-of-parameters: 5
+    cyclomatic-complexity: 20
+    number-of-methods: 10
+
   rules:
+    - avoid-dynamic
+    - avoid-passing-async-when-sync-expected
+    - avoid-redundant-async
+    - avoid-unnecessary-type-assertions
+    - avoid-unnecessary-type-casts
+    - avoid-unrelated-type-assertions
+    - avoid-unused-parameters
+    - avoid-nested-conditional-expressions
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - prefer-trailing-comma
+    - prefer-conditional-expressions
+    - no-equal-then-else
+    - prefer-moving-to-variable
+    - prefer-match-file-name
     - always_declare_return_types
     - empty_catches
     - file_names

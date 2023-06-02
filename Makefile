@@ -43,3 +43,6 @@ ios_hard_clear:
 	rm -f ios/Podfile.lock
 	rm -f pubspec.lock
 	flutter pub get
+
+flutter_metrics:
+	flutter pub run dart_code_metrics:metrics analyze lib
