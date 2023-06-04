@@ -15,8 +15,8 @@ extension ContextExtension on BuildContext {
   bool get isIphoneMiniSize =>
       deviceWidth == 320 && deviceHeight == 568; // iPhone SE 1st
   double get appBarHeight => MediaQuery.of(this).padding.top + kToolbarHeight;
-
   Color get scaffoldBackgroundColor => Theme.of(this).scaffoldBackgroundColor;
+  bool get isShowKeyboard => MediaQuery.of(this).viewInsets.bottom > 0;
 
   void hideKeyboard() {
     // https://github.com/flutter/flutter/issues/54277#issuecomment-640998757

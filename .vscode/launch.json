@@ -1,25 +1,71 @@
 {
-    // IntelliSense を使用して利用可能な属性を学べます。
-    // 既存の属性の説明をホバーして表示します。
-    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "layer_architecture_template",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "layer_architecture_template (profile mode)",
+            "name": "Develop Debug",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "program": "lib/main_develop.dart",
+            "args": [
+                "--debug",
+                "--dart-define=FLAVOR=develop",
+                "--dart-define=LOG=true"
+            ]
         },
         {
-            "name": "layer_architecture_template (release mode)",
+            "name": "Develop Release",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
+            "program": "lib/main_develop.dart",
+            "args": [
+                "--release",
+                "--dart-define=FLAVOR=develop",
+                "--dart-define=LOG=false"
+            ]
+        },
+        {
+            "name": "Staging Debug",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_staging.dart",
+            "args": [
+                "--debug",
+                "--dart-define=FLAVOR=staging",
+                "--dart-define=LOG=true"
+            ]
+        },
+        {
+            "name": "Staging Release",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_staging.dart",
+            "args": [
+                "--release",
+                "--dart-define=FLAVOR=staging",
+                "--dart-define=LOG=false"
+            ]
+        },
+        {
+            "name": "Production Debug",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_production.dart",
+            "args": [
+                "--debug",
+                "--dart-define=FLAVOR=production",
+                "--dart-define=LOG=true"
+            ]
+        },
+        {
+            "name": "Production Release",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_production.dart",
+            "args": [
+                "--release",
+                "--dart-define=FLAVOR=production",
+                "--dart-define=LOG=false"
+            ]
         }
     ]
 }
