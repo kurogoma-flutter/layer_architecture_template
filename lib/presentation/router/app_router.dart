@@ -53,4 +53,9 @@ class AppRouter {
       );
     }
   }
+
+  // ボトムシートを閉じる
+  void closeBottomSheet(BuildContext context) {
+    Navigator.of(context).pop();
+  }
 }
