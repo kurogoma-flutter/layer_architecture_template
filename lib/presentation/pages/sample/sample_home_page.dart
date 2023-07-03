@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../domain/sample/sample_notifier.dart';
+import '../../../domain/sample/sample_notifier.dart';
 
 class SampleHomePage extends HookConsumerWidget {
   const SampleHomePage({super.key});

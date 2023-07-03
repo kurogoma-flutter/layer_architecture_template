@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'utils/router/router.dart';
+import 'presentation/router/router.dart';
 
 class Application extends StatelessWidget {
   const Application({super.key});
