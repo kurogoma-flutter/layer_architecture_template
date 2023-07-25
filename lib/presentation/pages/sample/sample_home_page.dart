@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:layer_architecture_template/presentation/pages/sample/isar_sample_page.dart';
 
 import '../../../domain/sample/sample_notifier.dart';
+import '../../router/app_router.dart';
+import '../sample_detail/sample_detail_page.dart';
 
 class SampleHomePage extends HookConsumerWidget {
   const SampleHomePage({super.key});
@@ -35,6 +38,29 @@ class SampleHomePage extends HookConsumerWidget {
             Text(
               'Sample Home Page',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                AppRouter().goNamed(
+                  context,
+                  SampleDetailPage.routeName,
+                  params: {
+                    'parameter': 'test',
+                  },
+                );
+              },
+              child: const Text('Go to Detail Page'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                AppRouter().goNamed(
+                  context,
+                  IsarSamplePage.routeName,
+                );
+              },
+              child: const Text('Go to Local DB Page'),
             ),
           ],
         ),

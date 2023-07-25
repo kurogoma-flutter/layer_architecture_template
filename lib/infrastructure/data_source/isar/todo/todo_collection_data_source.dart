@@ -20,7 +20,9 @@ class TodoCollectionDataSource {
     required Todo todoModel,
   }) async {
     // データ追加
-    await isar.todos.put(todoModel);
+    await isar.writeTxn(() async {
+      await isar.todos.put(todoModel);
+    });
   }
 
   // データ削除
@@ -28,6 +30,8 @@ class TodoCollectionDataSource {
     required int id,
   }) async {
     // データ削除
-    await isar.todos.delete(id);
+    await isar.writeTxn(() async {
+      await isar.todos.delete(id);
+    });
   }
 }

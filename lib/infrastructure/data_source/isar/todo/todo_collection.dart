@@ -16,4 +16,10 @@ class Todo {
 
   @Index()
   late DateTime updatedAt;
+
+  @override
+  String toString() {
+    return 'Todo(id: $id, title: $title, description: $description, '
+        'isCompleted: $isCompleted, createdAt: $createdAt, updatedAt: $updatedAt)';
+  }
 }

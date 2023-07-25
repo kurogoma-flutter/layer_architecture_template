@@ -1,5 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../infrastructure/data_source/isar/todo/todo_collection.dart';
 import 'sample_service.dart';
 import 'sample_state.dart';
 
@@ -29,5 +30,29 @@ class SampleNotifier extends StateNotifier<SampleState> {
     state = state.copyWith(
       futureSampleList: AsyncValue.data(futureSampleModelList),
     );
+  }
+
+  /// Isar: 一覧データ取得
+  Future<List<Todo>> fetchTodoList() async {
+    return sampleService.fetchTodoList();
+  }
+
+  /// Isar: 単体データ取得
+  Future<Todo?> fetchTodoById(int id) async {
+    return sampleService.fetchTodoById(id);
+  }
+
+  /// Isar: データ追加 / 更新
+  Future<void> setTodoData({
+    required Todo todoModel,
+  }) async {
+    return sampleService.setTodoData(todoModel: todoModel);
+  }
+
+  /// Isar: データ削除
+  Future<void> deleteTodoData({
+    required int id,
+  }) async {
+    return sampleService.deleteTodoData(id: id);
   }
 }

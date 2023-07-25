@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../pages/error/error_page.dart';
 
+import '../pages/sample/isar_sample_page.dart';
 import '../pages/sample/sample_home_page.dart';
 import '../pages/sample_detail/sample_detail_page.dart';
 import '../pages/splash/splash_page.dart';
@@ -42,22 +43,37 @@ final router = GoRouter(
         GoRoute(
           name: SampleDetailPage.routeName,
           path: SampleDetailPage.routePath,
-          pageBuilder: (context, state) => CustomTransitionPage(
+          pageBuilder: (context, state) {
+            final String parameter = state.queryParams['parameter'] ?? '';
+            return CustomTransitionPage(
+              key: state.pageKey,
+              child: SampleDetailPage(
+                parameter: parameter,
+              ),
+              transitionDuration: const Duration(milliseconds: 300),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                return SlideTransitionBuilder().buildTransitions(
+                  MaterialPageRoute(
+                    builder: (context) => SampleDetailPage(
+                      parameter: parameter,
+                    ),
+                  ),
+                  context,
+                  animation,
+                  secondaryAnimation,
+                  child,
+                );
+              },
+            );
+          },
+        ),
+        GoRoute(
+          path: IsarSamplePage.routePath,
+          name: IsarSamplePage.routeName,
+          pageBuilder: (context, state) => NoTransitionPage(
             key: state.pageKey,
-            child: const SampleDetailPage(),
-            transitionDuration: const Duration(milliseconds: 300),
-            transitionsBuilder:
-                (context, animation, secondaryAnimation, child) {
-              return SlideTransitionBuilder().buildTransitions(
-                MaterialPageRoute(
-                  builder: (context) => const SampleDetailPage(),
-                ),
-                context,
-                animation,
-                secondaryAnimation,
-                child,
-              );
-            },
+            child: const IsarSamplePage(),
           ),
         ),
       ],
