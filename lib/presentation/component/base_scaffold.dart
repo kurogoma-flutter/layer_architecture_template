@@ -8,6 +8,7 @@ class BaseScaffold extends StatelessWidget {
     this.appBarTitle = '',
     this.onPressedFab,
     this.fabIcon,
+    this.leading,
   });
 
   final bool isShowAppBar;
@@ -15,6 +16,7 @@ class BaseScaffold extends StatelessWidget {
   final Widget child;
   final Function()? onPressedFab;
   final IconData? fabIcon;
+  final Widget? leading;
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +24,13 @@ class BaseScaffold extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 55, 55, 55),
       appBar: isShowAppBar
           ? AppBar(
+              leading: leading,
               automaticallyImplyLeading: false,
               title: Text(
                 appBarTitle,
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 20,
+                  color: Colors.white,
                 ),
               ),
               elevation: 0,

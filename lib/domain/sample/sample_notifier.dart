@@ -34,25 +34,25 @@ class SampleNotifier extends StateNotifier<SampleState> {
 
   /// Isar: 一覧データ取得
   Future<List<Todo>> fetchTodoList() async {
-    return sampleService.fetchTodoList();
+    return await sampleService.fetchTodoList();
   }
 
   /// Isar: 単体データ取得
   Future<Todo?> fetchTodoById(int id) async {
-    return sampleService.fetchTodoById(id);
+    return await sampleService.fetchTodoById(id);
   }
 
   /// Isar: データ追加 / 更新
   Future<void> setTodoData({
     required Todo todoModel,
   }) async {
-    return sampleService.setTodoData(todoModel: todoModel);
+    await sampleService.setTodoData(todoModel: todoModel);
   }
 
   /// Isar: データ削除
   Future<void> deleteTodoData({
     required int id,
   }) async {
-    return sampleService.deleteTodoData(id: id);
+    await sampleService.deleteTodoData(id: id);
   }
 }

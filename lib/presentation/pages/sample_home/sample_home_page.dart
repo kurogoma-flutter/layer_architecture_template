@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:layer_architecture_template/presentation/pages/sample/isar_sample_page.dart';
+import 'package:layer_architecture_template/presentation/pages/isar/isar_sample_page.dart';
 
 import '../../../domain/sample/sample_notifier.dart';
 import '../../router/app_router.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:layer_architecture_template/presentation/component/base_scaffold.dart';
-import 'package:layer_architecture_template/presentation/pages/sample/sample_home_page.dart';
+import 'package:layer_architecture_template/presentation/pages/sample_home/sample_home_page.dart';
 import 'package:layer_architecture_template/presentation/router/app_router.dart';
 
 class SplashPage extends HookConsumerWidget {

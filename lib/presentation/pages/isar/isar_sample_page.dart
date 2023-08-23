@@ -4,6 +4,7 @@ import 'package:layer_architecture_template/presentation/component/base_scaffold
 
 import '../../../domain/sample/sample_notifier.dart';
 import '../../../infrastructure/data_source/isar/todo/todo_collection.dart';
+import '../../router/app_router.dart';
 
 class IsarSamplePage extends ConsumerWidget {
   const IsarSamplePage({super.key});
@@ -17,6 +18,15 @@ class IsarSamplePage extends ConsumerWidget {
     return BaseScaffold(
       isShowAppBar: true,
       appBarTitle: 'Isar Sample Page',
+      leading: IconButton(
+        icon: const Icon(
+          Icons.arrow_back_ios_new_outlined,
+          color: Colors.white,
+        ),
+        onPressed: () {
+          AppRouter().pop(context);
+        },
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: CustomScrollView(
@@ -28,7 +38,7 @@ class IsarSamplePage extends ConsumerWidget {
                   onPressed: () async {
                     final todoList = await notifier.fetchTodoList();
                     for (final todo in todoList) {
-                      print(todo);
+                      debugPrint(todo.toString());
                     }
                   },
                   child: const Text('Isar Fetch TodoList'),
@@ -59,6 +69,7 @@ class IsarSamplePage extends ConsumerWidget {
                       ..createdAt = DateTime.now()
                       ..updatedAt = DateTime.now();
                     notifier.setTodoData(todoModel: newTodo);
+                    debugPrint('Set data to local');
                   },
                   child: const Text('Isar Store Todo'),
                 ),
@@ -80,6 +91,7 @@ class IsarSamplePage extends ConsumerWidget {
                       ..isCompleted = true
                       ..updatedAt = DateTime.now();
                     notifier.setTodoData(todoModel: todo1);
+                    debugPrint('Update data to local');
                   },
                   child: const Text('Isar Update Todo'),
                 ),
@@ -91,6 +103,7 @@ class IsarSamplePage extends ConsumerWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     notifier.deleteTodoData(id: 1);
+                    debugPrint('Remove data to local');
                   },
                   child: const Text('Isar Delete Todo'),
                 ),
