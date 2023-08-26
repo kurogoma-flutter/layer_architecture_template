@@ -1,7 +1,7 @@
 import 'package:isar/isar.dart';
 import 'package:layer_architecture_template/infrastructure/data_source/isar/todo/todo_collection.dart';
 
-import '../../../../isar_instance.dart';
+import '../isar_instance.dart';
 
 class TodoCollectionDataSource {
   final isar = IsarInstance().isar;

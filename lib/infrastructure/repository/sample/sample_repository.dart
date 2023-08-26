@@ -21,9 +21,16 @@ class SampleRepository {
   final SampleDataSource sampleDataSource;
   final TodoCollectionDataSource todoCollectionDataSource;
 
+  /// 揮発性の高いメモリ上のデータ
+  List<SampleModel> sampleList = [];
+
   /// 一覧データ取得
   Future<List<SampleModel>> fetchSampleModelList() async {
-    return sampleDataSource.fetchSampleModelList();
+    final List<SampleModel> sampleModelList =
+        await sampleDataSource.fetchSampleModelList();
+    // メモリ（変数）に保持
+    sampleList = sampleModelList;
+    return sampleModelList;
   }
 
   /// Isar: 一覧データ取得

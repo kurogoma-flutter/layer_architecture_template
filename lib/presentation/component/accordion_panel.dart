@@ -86,8 +86,8 @@ class _AccordionPanelState extends State<AccordionPanel>
                       );
                     },
                     child: widget.defaultExpanded
-                        ? const Icon(Icons.expand_more)
-                        : const Icon(Icons.expand_less),
+                        ? const Icon(Icons.expand_more, size: iconSize)
+                        : const Icon(Icons.expand_less, size: iconSize),
                   ),
                 ],
               ),
