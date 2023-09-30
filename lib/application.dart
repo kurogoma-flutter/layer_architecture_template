@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 import 'presentation/router/router.dart';
@@ -8,6 +9,8 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      builder: DevicePreview.appBuilder,
+      locale: DevicePreview.locale(context),
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: Colors.white,
