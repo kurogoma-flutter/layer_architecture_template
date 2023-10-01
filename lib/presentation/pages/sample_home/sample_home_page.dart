@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:layer_architecture_template/presentation/pages/isar/isar_sample_page.dart';
 
-import '../../../domain/sample/sample_notifier.dart';
 import '../../router/app_router.dart';
 import '../sample_detail/sample_detail_page.dart';
 
@@ -14,8 +13,8 @@ class SampleHomePage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(sampleNotifierProvider); // stateの呼び出し
-    final notifier = ref.read(sampleNotifierProvider.notifier); // notifierの呼び出し
+    // final state = ref.watch(sampleNotifierProvider); // stateの呼び出し
+    // final notifier = ref.read(sampleNotifierProvider.notifier); // notifierの呼び出し
 
     // 使い方
     // state : state.sampleList
